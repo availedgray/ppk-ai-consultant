@@ -1,0 +1,822 @@
+*{
+    font-family: "kit-sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 16px;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 105px minmax(60px,auto) minmax(500px,auto) minmax(200px,auto);
+}
+
+/* header begin */
+#skipNav{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skipNav:focus{
+    position: static;
+    width: auto;
+    height: 15px;
+}
+
+header{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: white;
+    
+    display: flex;
+}
+
+fieldset#search-container{
+    padding-top: 65px;
+    margin-left: 15px;
+    border: none;
+}
+
+input[type=text],input[type=email],select {
+    background-color: #d9c5b4;
+    border-radius: 25px;
+    width: 220px;
+    border: none;
+    outline: none;
+    padding: 8px 0px 5px 15px;
+} 
+
+.search-btn{
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+    border: none;
+    background-color: #d95d30;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+header ul{
+    flex-grow: 8;
+    padding: 75px 20px 0 0;
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
+}
+
+#header-ul a,#header-ul p,#header-ul i{
+    padding: 0 3px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 25px;
+    color: #d95d30;
+}
+
+#header-ul a:hover{
+    text-decoration: underline;
+}
+
+/* nav begin */
+nav{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: #d95d30;
+}
+
+nav ul{
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-size: 26px;
+    display: block;
+    padding: 0.5em 1em;
+}
+
+nav ul a:hover{
+    background-color: black;
+    color: white;
+}
+
+.menu{
+    display: none;
+    background-color: #d95d30;        
+}
+
+.menu i{
+    font-size: 2em;
+    /* color: black;
+    background-color: #d9c5b4; */
+    color: white;
+    padding: 15px;
+}
+
+.menu i:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+/* main begin */
+#index-main{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: white;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+aside#slider{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-image: url("../img/slider-bg.jpg");
+    background-size: 100%;
+    position: relative;
+}
+
+#slider img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 85%;
+    transition: all 1s;
+}
+
+.section-heading{
+    display: none;
+}
+
+h1#index-heading{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    /* right: 5%; */
+    color: black;
+    background-color: white;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: 0.4em;
+}
+
+#slider img:hover{
+    transform: scale(1.02);
+}
+
+#table{
+    padding: 5em 15em;
+}
+
+#table h2{
+    text-align: center;
+}
+
+#rated-table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color:#d9c5b4;
+}
+
+#rated-table td, #rated-table th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    letter-spacing: 0.1em;
+}
+
+#comments{
+    width: 600px;
+}
+
+#rated-table th{
+    font-size: 18px;
+    font-weight: 800;
+}
+  
+
+section#special{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 1em 0;
+}
+
+section#special h3{
+    font-weight: 900;
+    font-size: 65px;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+
+h4{
+    font-weight: 600;
+    font-size: 28px;
+    text-align: left;
+    margin: 12px;
+}
+
+h5{
+    font-weight: 600;
+    font-size: 80px;
+    text-align: left;
+    margin: 0 10px;
+}
+
+section#special img{
+    float: right;
+    margin-right: 15px;
+}
+
+section#special img:hover{
+    transform: scale(1.02);
+}
+
+aside#special-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 35px;
+}
+
+aside#special-cards section{
+    /* flex-grow: 2; */
+    max-width: 400px;
+    /* height: 250px; */
+    margin: 10px 20px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+aside#special-cards section:hover{
+    transform: scale(1.02);
+}
+
+section#special-cards-1, section#special-cards-3{
+    background-color: #d95d30;
+}
+
+section#special-cards-2{
+    background-color: #d9c5b4;
+}
+
+article#story{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
+    background-image: url("../img/pet-food.jpg");
+    background-color: #d95d30;
+    padding: 3em 30em;
+}
+
+.article-heading{
+    font-weight: 700;
+    font-size: 4em;
+    padding-bottom: 0.8em;
+}
+
+article#story h2{
+    color: white; 
+}
+
+article#story h3{
+    color: black;
+}
+
+p{
+    color: black;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding: 0 3em 1em 3em;
+}
+
+article#story-2{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    text-align: center;
+    background-color: #ccd7d9;
+    padding: 3em 15em;
+}
+
+article#story-2 img{
+    margin: 1em;
+}
+
+.content{
+    padding: 50px;
+}
+
+.radio{
+    text-align: center;
+    margin: 3em;
+}
+
+.radio p{
+    color: #a66b49;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* article pages */
+.main-articles{
+    background-color: #d9c5b4;
+    padding: 8em 5em;
+}
+
+.main-articles p{
+    color: black;
+    font-size: 18px;
+}
+
+.emphasize{
+    background-color:#a66b49;
+    font-size: 20px;
+    font-weight: 800;
+} 
+
+/* special page*/
+#special-main{
+    grid-row: 3/4;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 600px;
+}
+
+#banner{
+    grid-row: 1/2;
+    width: 100%;
+}
+
+section#special-join{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+section#special-join img{
+    width: 100%;
+    padding: 15px;
+    transition: all 1s;
+}
+
+section#special-join img:hover{
+    transform: scale(1.05);
+}
+
+section#benefit{
+    grid-row: 3/4;
+    background-color: #d95d30;
+    text-align: center;
+}
+
+section#benefit img{
+    margin-bottom: 0.8em;
+}
+
+section#benefit p{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+/* dog & cat page */
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cards section{
+    margin: 15px;
+    text-align: center;
+}
+
+section#dog-cards section{
+    background-color: #d9c5b4;
+}
+
+section#cat-cards section{
+    background-color: #a66b49;
+}
+
+.card-heading{
+    font-weight: 900;
+    font-size: 50px;
+    padding: 30px;
+}
+
+.card-menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+.card-menu a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 26px;
+    display: block;
+    padding: 0.5em 1em;
+}
+
+#dog-cards section ul a:hover{
+    background-color:#d95d30;
+}
+
+#cat-cards section ul a:hover{
+    background-color: #d9c5b4;
+}
+
+/* vet page */
+#vet-main{
+    grid-row: 3/4;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+#vet-banner{
+    grid-row: 1/2;
+}
+
+#vet-banner img{
+    width: 100%;
+}
+
+article#paw-insurance{
+    grid-row: 2/3;
+    background-color: #d95d30;
+    text-align: center;
+    padding-bottom: 150px;
+}
+
+article#paw-insurance img{
+    width: 100%;
+}
+
+h1#insurance-heading{
+    color: white;
+    padding: 150px 0 50px 0;
+}
+
+aside#insurance-detail{
+    grid-row: 3/4;
+    background-color: #d9c5b4;
+
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-rows: 1fr;
+}
+
+aside#insurance-detail img{
+    grid-column: 1/2;
+    padding: 15px 30px 15px 160px;
+}
+
+article#insurance-article{
+    grid-column: 2/3;
+    padding: 50px 0;
+}
+
+article#insurance-article h2{
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    padding-bottom: 15px;
+}
+
+article#insurance-article p{
+    padding-bottom: 50px;
+}
+
+/* cart page */
+section#cart-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+#register{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#contact-details{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 0 3em;
+}
+
+.details{
+    font-size: 20px;
+    font-weight: 800;
+    padding: 30px 0;
+    color: #a66b49;
+}
+
+iframe{
+    padding: 50px 0;
+}
+
+#item{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+section#item img{
+    float: left;
+    margin-right: 30px;
+}
+
+section#item section{
+    padding: 30px 0;
+    border-top: 1px solid rgb(151, 151, 151);
+}
+
+section#item section h3{
+    font-weight: 900;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+section#item section p{
+    color: black;
+}
+
+.price{
+    float: right;
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+#summary{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color:#d9c5b4;
+
+    height: 580px;
+    padding: 30px;
+    margin: 60px;
+}
+
+#summary h3{
+    font-weight: 900;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+#summary p,#summary a{
+    color: black;
+    padding: 10px 2px;
+    text-decoration: none;
+}
+
+#summary a:hover{
+    color: white;
+    background-color: black;
+}
+
+#checkout{
+    background-color: #d95d30;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 900;
+    float: right;
+    cursor: pointer;
+}
+
+/* footer begin*/
+footer{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-color: #d9c5b4;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article#contact-us{
+    background-color: #d95d30;
+}
+
+footer ul,footer article{
+    list-style: none;
+    padding: 2em 6em;
+}
+
+#footer-list a,#footer-services a,footer h4{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    padding: 10px 0;
+}
+
+#contact-us a{
+    text-decoration: none;
+}
+
+#footer-list a:hover,#footer-services a:hover,article#contact-us a:hover{
+    text-decoration: underline;
+}
+
+footer h3{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+footer h4{
+    color: black;
+    font-weight: 600;
+}
+
+footer p{
+    font-size: 25px;
+    padding: 10px 0;
+    text-align: left;
+}
+
+#error-dog{
+    background-color:#d9c5b4;
+    padding: 50px 0 100px 0;
+}
+
+#error-dog img{
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+#error-dog p, #error-dog h1{
+    color: black;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 15px 0;
+}
+
+#error-dog a{
+    color: #d95d30;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:1400px){
+    h1#index-heading{
+        font-size: 25px;
+    }
+
+    article#story{
+        padding: 3em 6em;
+    }
+
+    article#story-2{
+        padding: 3em 6em;
+    }
+}
+
+@media screen and (max-width:1115px) {
+    footer{
+        flex-direction: column;
+    }
+
+    #header-ul a,#header-ul p,#header-ul i{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:990px){
+    ul#nav-list{
+        display: none;
+    }
+
+    ul#nav-list.active{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .menu{
+        display: block;
+        float: right;
+    }
+
+    header{
+        background-color: white;
+        justify-content: center;
+    }
+
+    header form,header ul{
+        display: none;
+    }
+
+    h1#index-heading{
+        letter-spacing: 6px;
+    }
+
+    .article-heading{
+        font-size: 3em;
+    }
+
+    section#special h3{
+        font-size: 35px;
+    }
+    
+    h4{
+        font-size: 20px;
+    }
+    
+    h5{
+        font-size: 60px;
+    }
+
+    aside#special-cards section{
+        flex-grow: 2;
+        max-width: 700px;
+        margin: 10px 20px;
+        padding: 15px 5px;
+        border-radius: 20px;
+    }
+
+    section#special-join{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    section#benefit p{
+        font-size: 20px;
+    }
+
+    .card-menu{
+        display: none;
+    }
+
+    aside#insurance-detail#insurance-detail{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+    
+    aside#insurance-detail img {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 85%;
+        padding: 15px;
+    }
+
+    article#insurance-article{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    } 
+
+    #cart-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    #item{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    #summary{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+}

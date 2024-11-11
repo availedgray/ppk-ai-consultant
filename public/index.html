@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Pet Supplies Picking Guidance">
+    <meta name="keywords" content="wet-food, grain-free, nutrition, freeze-dry, best cat food in Australia">
+    <meta name="author" content="Yang Wang">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consultant (Beta) - Pet Advisor | PawPawPicks</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zfw3gpw.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/ai-consultant.css">
+    
+</head>
+<body>
+    <div class="wrapper" id="index-wrapper">
+        <header>
+            <a href="#index-main" id="skipNav">Skip to main content</a>
+            <a href="index.html"><img src="/img/logo-3.png" alt="pawpawpicks logo" id="back-to-index"></a>
+            <form>
+                <fieldset id="search-container">
+                    <input type="text" id="search-site" name="search-input" placeholder="Search in this site...">
+                    <button class="search-btn" type="submit" aria-label="submit the search form"><i class="fa fa-search"></i> </button>
+                </fieldset>
+            </form>
+            <ul id="header-ul">
+                <li><a href="contact.html"><i class="fa fa-paw"></i>create account</a></li>
+                <!-- <li><p>|</p></li>
+                <li><a href="cart.html">shopping cart<i class="fa fa-shopping-cart"></i></a></li> -->
+            </ul>
+        </header>
+        <nav class="navbar">
+            <aside class="menu" id="togglebutton"><i class="fa fa-bars"></i></aside>
+            <aside class="menu"><a href="index.html" aria-label="search in the site"><i class="fa fa-search"></i></a></aside>
+            <aside class="menu"><a href="contact.html" aria-label="go to the contact page"><i class="fa fa-shopping-cart" ></i></a></aside>
+            <aside class="menu"><a href="contact.html" aria-label="go to the contact page"><i class="fa fa-paw" ></i></a></aside>
+            <ul id="nav-list">
+                <li><a href="special.html">special</a></li>
+                <li><a href="dog.html">dog</a></li>
+                <li><a href="cat.html">cat</a></li>
+                <li><a href="contact.html">contact us</a></li>
+            </ul>            
+        </nav>
+
+        <!-- AI consultant main div -->
+        <div id="pet-consultant-app"></div>
+
+        <footer>
+            <ul id="footer-list">
+                <li><h3>About Us</h3></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Site Map</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of use</a></li>
+            </ul>
+            <ul id="footer-services">
+                <li><h3>Customer Services</h3></li>
+                <li><a href="">Shipping</a></li>
+                <li><a href="">Returns</a></li>
+                <li><a href="">Price Guarantee</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+            <article id="contact-us">
+                <h3>Contac Us</h3>
+                <a href=""><i class="fa fa-envelope"></i> Email us on:</a>
+                <h4>admin@pawpawpicks.com</h4>
+                <a href=""><i class="fa fa-phone"></i> Call us on:</a>
+                <h4>0400400400</h4>
+                <p id="follow-us">
+                    <i class="fa fa-facebook-official"></i>
+                    <i class="fa fa-twitter-square"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube-play"></i>
+                </p>
+            </article>
+        </footer>
+    </div>
+    <!-- <script src="js/menu.js"></script> -->
+
+    <script src="/js/pet-consultant.js"></script>
+
+    <!-- initialize app-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          new AIPetConsultant();
+        });
+      </script>
+</body>
+</html>
