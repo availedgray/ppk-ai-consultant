@@ -9,6 +9,10 @@ class AIPetConsultant {
         // creat form
         const template = `
           <div class="pet-consultant-container">
+            <div>
+              <h3 class="consultant-title">Find expert advice from our AI Consultant</h3>
+              <p class="consultant-description">Get tailored solutions to your pet-related concerns with our AI-powered insights. <br>Enter your question and consult!</p>
+            </div>
             <form id="petConsultantForm" class="consultant-form">
               <div class="form-group">
                 <label for="petType">Select your cat's breed</label>
@@ -48,6 +52,7 @@ class AIPetConsultant {
               </div>
               <div class="result-content"></div>
             </div>
+            <p class="consultant-model">Powered by OpenAI GPT 3.5</p>
           </div>
         `;
 

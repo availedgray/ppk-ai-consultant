@@ -8,10 +8,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors({
-    origin: process.env.ALLOWED_ORIGINS.split(','),
-    credentials: true
-}));
+// app.use(cors({
+//     origin: process.env.ALLOWED_ORIGINS.split(','),
+//     credentials: true
+// }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 

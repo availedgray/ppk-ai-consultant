@@ -23,7 +23,7 @@ class ConsultantController {
                 messages: [
                     {
                         role: "system",
-                        content: "You are a professional veterinarian who specializes in answering pet health and behavior questions."
+                        content: "You are a professional veterinarian specializing in cats. You only answer questions related to cats' health, behavior, and care."
                     },
                     {
                         role: "user",
